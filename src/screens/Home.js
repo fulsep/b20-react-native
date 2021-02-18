@@ -36,7 +36,13 @@ class Home extends React.Component {
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.info}>
           {/*<View style={styles.profilePicture} />*/}
-          <Image source={picture} style={styles.profilePicture} />
+          <Image
+            source={{
+              uri:
+                'https://upload.wikimedia.org/wikipedia/commons/0/0f/Kanye_West_at_the_2009_Tribeca_Film_Festival-2_%28cropped%29.jpg',
+            }}
+            style={styles.profilePicture}
+          />
           <View style={styles.profileText}>
             <Text style={styles.profileName}>Kanye West</Text>
           </View>
@@ -222,7 +228,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 10,
-    backgroundColor: 'black',
+    resizeMode: 'cover',
   },
   profileText: {
     marginLeft: 10,
