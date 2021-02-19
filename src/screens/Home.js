@@ -109,9 +109,11 @@ class Home extends React.Component {
                 <Text style={[styles.cardText, styles.bigText]}>∞</Text>
               </View>
             </View>
-            {[...Array(20)].map(() => {
+            {[...Array(20)].map((val, index) => {
               return (
-                <View style={[styles.card, {marginVertical: 10}]}>
+                <View
+                  key={String(index)}
+                  style={[styles.card, {marginVertical: 10}]}>
                   <View style={styles.row}>
                     <View style={styles.cardLogo} />
                     <View style={styles.cardContent}>
